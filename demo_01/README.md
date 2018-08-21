@@ -1,5 +1,7 @@
 # webpack demo 01
 
+[toc]
+
 ## 前期准备
 
 1. 安装`webpack`以及`webpack-cli`
