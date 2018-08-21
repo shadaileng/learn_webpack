@@ -96,3 +96,26 @@ module.exports = {
 $ npm run dev
 ```
 
+## 源码调试
+
+`webpack`配置文件有一个配置选项`devtool`可以配置打包文件的源码映射，可选的选项有：
+
+- `source-map`: 单独文件中生成完整的源码文件，具有最好的映射功能，打包速度最慢
+- `cheap-module-source-map`: 单独文件中生成不带列映射的`source-map`，提高了打包速度，但不利于调试。
+- `eval-source-map`: 使用`eval`打包源码模块，不影响打包速度的情况下生成完整的`source-map`,输出的`js`文件对性能和安全具有一定隐患，在开发阶段可以使用。
+- `cheap-module-eval-source-map`: 最快的生成`source-map`的方式，生成的`source-map`与`js`文件同行显示，性能和安全具有一定隐患。
+
+开发阶段一般使用`eval-source-map`
+
+```
+module.exports = {
+	mode: "development",
+	devtool: "eval-source-map",
+	entry: __dirname + "/src/main.js",
+	output: {
+		path: __dirname + "/build",
+		filename: "bundle.js"
+	}
+}
+```
+

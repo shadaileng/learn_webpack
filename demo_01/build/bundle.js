@@ -93,7 +93,12 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = function (msg) {\n\tlet el = document.createElement('div')\n\tel.textContent = msg\n\treturn el\n}\n\n\n//# sourceURL=webpack:///./src/greet.js?");
+module.exports = function (msg) {
+	let el = document.createElement('div')
+	el.textContent = msg
+	return el
+}
+
 
 /***/ }),
 
@@ -104,8 +109,12 @@ eval("module.exports = function (msg) {\n\tlet el = document.createElement('div'
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const greet = __webpack_require__(/*! ./greet.js */ \"./src/greet.js\")\n\ndocument.querySelector('#app').appendChild(greet('hello webpack !!!'))\n\n\n//# sourceURL=webpack:///./src/main.js?");
+const greet = __webpack_require__(/*! ./greet.js */ "./src/greet.js")
+
+document.querySelector('#app').appendChild(greet('hello webpack !!!'))
+
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map
