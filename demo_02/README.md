@@ -1,6 +1,6 @@
-# webpack demo 01
+# webpack demo 02
 
-## 前期准备
+## 安装并配置
 
 `webpack`提供了一个基于`node.js`的本地服务器，可以监听源码，在改动后自动刷新显示改动后的结果。
 
@@ -20,9 +20,9 @@ $ npm install --save-dev webpack-dev-server
 - `color`: 仅适用于`CLI`
 - `compress`: 布尔值;此选项启动时，一切服务都启动`gzip`压缩
 - `contentBase`: 布尔值、数组或字符串;指定静态文件目录
-1. `false`禁用;
-2. 字符串为提供静态文件的路径
-3. 数组为多个路径。默认当前路径。
+	1. `false`禁用;
+	2. 字符串为提供静态文件的路径
+	3. 数组为多个路径。默认当前路径。
 - `disableHostCheck`: 布尔值;此选项启动时，绕过主机检查，容易受到`DNS`重新连接攻击
 - `filename`: 字符串;在惰性模式(`lazy: true`)下,指定文件在请求时才会编译。
 - `headers`: 对象;请求头内容
@@ -85,17 +85,22 @@ $ npm install --save-dev webpack-dev-server
 }
 ```
 
-3. 使用`HtmlWebpackPlugin`插件模板
+## 使用`HtmlWebpackPlugin`插件模板
 
-安装`html-webpack-plugin`模块
+1. 安装`html-webpack-plugin`模块
+
 ```
 $ npm install --save-dev html-webpack-plugin
 ```
-移动`build/index.html`文件到根目录，并删除
+
+2. 移动`build/index.html`文件到根目录，并删除
+
 ```
 <script src="./bundle.js"></script>
 ```
-`webpack.config.js`文件添加`HtmlWebpackPlugin`的配置
+
+3. `webpack.config.js`文件添加`HtmlWebpackPlugin`的配置
+
 ```
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
