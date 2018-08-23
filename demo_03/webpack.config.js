@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
 	mode: "development",
-	devtool: "eval-source-map",
+	devtool: "source-map",
 	entry: __dirname + "/src/main.js",
 	output: {
 		path: __dirname + "/build",
@@ -17,5 +17,23 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: __dirname + '/index.html' // 指定模板文件路径
 		})
-	]
+	],
+	module: {
+		rules: [
+			{
+				test: /(\.css)$/,
+				use: [
+					{
+						loader: 'style-loader'
+					},
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true
+						}
+					}
+				]
+			}
+		]
+	}
 }
