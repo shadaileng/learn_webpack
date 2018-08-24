@@ -87,11 +87,13 @@ $ npm install --save-dev webpack-dev-server
 
 3. 添加启动本地服务器的命令
 
+```
 {
 	"scripts": {
 		"server": "webpack-dev-server --open"
 	}
 }
+```
 
 4. 终端启动本地服务
 
