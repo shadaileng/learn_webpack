@@ -85,6 +85,20 @@ $ npm install --save-dev webpack-dev-server
 }
 ```
 
+3. 添加启动本地服务器的命令
+
+{
+	"scripts": {
+		"server": "webpack-dev-server --open"
+	}
+}
+
+4. 终端启动本地服务
+
+```
+$ npm run server
+```
+
 ## 使用`HtmlWebpackPlugin`插件模板
 
 1. 安装`html-webpack-plugin`模块
