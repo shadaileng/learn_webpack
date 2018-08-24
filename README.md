@@ -4,4 +4,6 @@
 
 - demo_02: `webpack`本地服务器，使用`HtmlWebpackPlugin`插件以根目录下的`index.html`文件作为索引文件模板
 
-- demo_03: loader
+- demo_03: `loader`,`css-loader`和`style-loader`案例
+
+- demo_04: `Babel`
